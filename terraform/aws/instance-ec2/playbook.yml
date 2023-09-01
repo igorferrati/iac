@@ -1,0 +1,8 @@
+- hosts: terraform-ansible
+  tasks:
+  - name: criar arq
+    copy:
+      dest: /home/ubuntu/index.html
+      content: <h1>Feito com terraform e ansible</h1>
+  - name: criar servidor
+    shell: "nohup busybox httpd -f -p 8080 &"
