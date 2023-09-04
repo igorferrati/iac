@@ -28,3 +28,8 @@ resource "aws_key_pair" "chave-ssh" {
   public_key = file("${var.key}.pub")
   
 }
+
+#output ip to setup ansible
+output "public_ip" {
+  value = aws_instance.app_server.public_ip
+}
