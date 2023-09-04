@@ -9,3 +9,5 @@
 
 #key pairs
 *.pem
+iac-dev*
+iac-prd*
