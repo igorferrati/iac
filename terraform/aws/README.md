@@ -12,3 +12,6 @@ terraform apply
 ```
 
 * Utilizaremos ansible para criar uma página web em nosso servidor
+
+Hosts 
+Aqui colocaremos nossos hosts

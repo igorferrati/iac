@@ -1,0 +1,25 @@
+- hosts: terraform-ansible
+  tasks:
+  - name: install python 3 and virtualenv
+    apt: 
+      pkg: 
+      - python3
+      - virtualenv
+      update_cache: yes
+      become: yes
+  - name: install dependencies pip (django and django rest)
+    pip:
+      virtualenv: /home/ubuntu/projects/venv
+      name:
+        - django
+        - djangorestframework
+  - name: init project 
+    shell: '. /home/ubuntu/projects/venv/bin/activate; django-admin startproject setup /home/ubuntu/projects/'
+  - name: config hosts settings
+    lineinfile:
+      path: /home/ubuntu/projects/setup/settings.py
+      regexp: 'ALLOWED_HOSTS'
+      line: 'ALLOWED_HOSTS = ["*"]'
+      backrefs: yes #caso não encontre o allowed_hosts não faça nada
+      
+
