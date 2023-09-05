@@ -6,8 +6,8 @@
 ```
 ├── terraform 
 |   ├── aws
-|   |    ├── ec2-dev-prd
-|   |    ├── ec2-terraform-ansible-python
+|   |    ├── dev-prd
+|   |    ├── ec2-basic
 |   |    └── instance-ec2
 |   |
 |   └── gcp
