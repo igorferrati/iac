@@ -6,7 +6,13 @@
 
 ```
 ├── terraform 
-    ├── aws
-    └── gcp
+|   ├── aws
+|   |    ├── ec2-dev-prd
+|   |    ├── ec2-terraform-ansible-python
+|   |    └── instance-ec2
+|   |
+|   └── gcp
+|
+└── readme
 ```
 
