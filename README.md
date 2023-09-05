@@ -2,13 +2,12 @@
 
 * Repo destinado à infra como código, estudos e casos de uso.
 
-:file_folder: terraform 
 
 ```
 ├── terraform 
 |   ├── aws
-|   |    ├── ec2-dev-prd
-|   |    ├── ec2-terraform-ansible-python
+|   |    ├── dev-prd
+|   |    ├── ec2-basic
 |   |    └── instance-ec2
 |   |
 |   └── gcp

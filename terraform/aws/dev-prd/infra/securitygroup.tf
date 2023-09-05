@@ -1,6 +1,5 @@
 resource "aws_security_group" "access_default" {
-  name = "access_default"
-  description = "sg access dev and prd"
+  name = var.securityGroup
   ingress {
     cidr_blocks = [ "0.0.0.0/0" ] #full access
     ipv6_cidr_blocks = [ "::/0" ] #full access ipv6

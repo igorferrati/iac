@@ -13,14 +13,14 @@ provider "aws" {
   region  = var.region_aws
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-002829755fa238bfa" #amazon-ubuntu
+resource "aws_launch_template" "maquina" {
+  image_id           = "ami-002829755fa238bfa" 
   instance_type = var.instance
   key_name = var.key
-
   tags = {
     Name = "instance-ubuntu"
   }
+  security_group_names = [ var.securityGroup ]
 }
 
 resource "aws_key_pair" "chave-ssh" {
