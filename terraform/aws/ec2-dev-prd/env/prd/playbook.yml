@@ -9,7 +9,7 @@
       become: yes
   - name: git clone
     ansible.builtin.git: 
-      repo: url
+      repo: https://github.com/igorferrati/api-clientes-django/tree/main
       dest: /home/ubuntu/projects/
       version: main
       force: yes
