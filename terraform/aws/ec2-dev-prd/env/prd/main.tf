@@ -3,6 +3,7 @@ module "aws-prd" {
   instance = "t2.micro"
   region_aws = "us-west-2"
   key = "iac-prd"
+  securityGroup = "sg-prd"
 }
 
 #output ip to setup ansible

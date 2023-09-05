@@ -3,6 +3,7 @@ module "aws-dev" {
   instance = "t2.micro"
   region_aws = "us-west-2"
   key = "iac-dev"
+  securityGroup = "sg-dev"
 }
 
 #output ip to setup ansible
