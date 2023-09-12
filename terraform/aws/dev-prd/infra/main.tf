@@ -29,7 +29,18 @@ resource "aws_key_pair" "chave-ssh" {
   
 }
 
-#output ip to setup ansible
-output "public_ip" {
-  value = aws_instance.app_server.public_ip
+# #output ip to setup ansible
+# output "public_ip" {
+#   value = aws_instance.app_server.public_ip
+# }
+
+resource "aws_autoscaling_group" "asg-grupo" {
+  availability_zones = [ "${var.region_aws}a" ]
+  name = var.asgname
+  max_size = var.max
+  min_size = var.min
+  launch_template {
+    id = aws_launch_template.maquina.id
+    version = "$Latest"
+  }
 }
