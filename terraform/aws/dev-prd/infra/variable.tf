@@ -16,3 +16,15 @@ variable "instance" {
 variable "securityGroup" {
   type = string
 }
+
+variable "min" {
+  type = number
+}
+
+variable "max" {
+  type = number
+}
+
+variable "asgname" {
+  type = string
+}
