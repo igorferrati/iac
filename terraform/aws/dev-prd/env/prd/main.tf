@@ -7,6 +7,7 @@ module "aws-prd" {
   min = 1
   max = 5
   asgname = "asg-prod"
+  producao = true
 }
 
 # #output ip to setup ansible

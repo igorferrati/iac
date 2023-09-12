@@ -28,3 +28,7 @@ variable "max" {
 variable "asgname" {
   type = string
 }
+
+variable "producao" {
+  type = bool
+}
