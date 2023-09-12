@@ -7,6 +7,7 @@ module "aws-dev" {
   min = 0
   max = 2
   asgname = "asg-dev"
+  producao = false
 }
 
 # #output ip to setup ansible

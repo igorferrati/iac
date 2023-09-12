@@ -21,6 +21,14 @@ export AWS_SECRET_ACCESS_KEY=
 
 :white_check_mark: asg
 
+:white_check_mark: lb
+
+VPC
+
+target group
+
+:white_check_mark: subnets
+
 :white_check_mark: user data -> ansible.sh
 
 
