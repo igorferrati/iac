@@ -11,14 +11,12 @@ export AWS_SECRET_ACCESS_KEY=
 
 :file_folder: dev-prd
 
+* Create:
+
 :white_check_mark: launch template
-
 :white_check_mark: security group
-
 :white_check_mark: aws key pair
-
 :white_check_mark: asg
-
 :white_check_mark: user data -> ansible.sh
 
 
