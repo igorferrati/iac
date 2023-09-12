@@ -40,11 +40,31 @@ resource "aws_autoscaling_group" "asg-grupo" {
   name = var.asgname
   max_size = var.max
   min_size = var.min
+  target_group_arns = var.producao ? [ aws_lb_target_group.target_lb[0].arn ] : []
   launch_template {
     id = aws_launch_template.maquina.id
     version = "$Latest"
   }
-  target_group_arns = var.producao ? [ aws_lb_target_group.target_lb[0].arn ] : []
+}
+
+resource "aws_autoscaling_schedule" "ligar" {
+  scheduled_action_name = "ligar"
+  min_size              = 0
+  max_size              =  1
+  desired_capacity      = 1
+  start_time            = timeadd(timestamp(), "10m")
+  recurrence            = "0 10 * * MON-FRI" #7 +3h fuso
+  autoscaling_group_name = aws_autoscaling_group.asg-grupo.name
+}
+
+resource "aws_autoscaling_schedule" "deligar" {
+  scheduled_action_name = "deligar"
+  min_size              = 0
+  max_size              =  1
+  desired_capacity      = 0
+  start_time            = timeadd(timestamp(), "11m")
+  recurrence            = "0 21 * * MON-FRI" #18 +3h fuso
+  autoscaling_group_name = aws_autoscaling_group.asg-grupo.name
 }
 
 resource "aws_default_subnet" "subnet_1" {

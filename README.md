@@ -1,6 +1,8 @@
 # iac
 
 * Repo destinado à infra como código, estudos e casos de uso.
+* Terraform
+* Ansible
 
 
 ```
