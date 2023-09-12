@@ -23,9 +23,9 @@ export AWS_SECRET_ACCESS_KEY=
 
 :white_check_mark: lb
 
-VPC
+:white_check_mark: VPC
 
-target group
+:white_check_mark: target group
 
 :white_check_mark: subnets
 
