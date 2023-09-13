@@ -11,3 +11,4 @@
 *.pem
 iac-dev*
 iac-prd*
+key.json
