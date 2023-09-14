@@ -12,3 +12,5 @@
 iac-dev*
 iac-prd*
 key.json
+ansible_ed25519*
+
