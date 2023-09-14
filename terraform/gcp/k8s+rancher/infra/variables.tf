@@ -6,11 +6,9 @@ variable "gcp_region" {
   type = string
 }
 
-# variable "gcp_zones" {
-#   description = "zones"
-#   type        = list(string)
-#   default     = ["us-central1-a", "us-central1-b", "us-central1-c"]
-# }
+variable "gcp_zone" {
+  type = string
+}
 
 
 variable "instance_name" {
@@ -18,10 +16,6 @@ variable "instance_name" {
 }
 
 variable "instance_type" {
-  type = string
-}
-
-variable "instance_zone" {
   type = string
 }
 

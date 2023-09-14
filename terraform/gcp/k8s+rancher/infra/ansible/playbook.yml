@@ -1,6 +1,6 @@
 ---
 - name: install docker
-  hosts: nodes
+  hosts: rancher
   become: yes
   vars:
     ubuntu_codename: "{{ ansible_distribution_release }}"
